@@ -1,0 +1,130 @@
+<style>
+   .sidebar-box1 {
+      margin-bottom: 25px;
+      
+      text-align: left;
+    }
+     .post-image1 {
+      float: left;
+      width: 160px;
+      height: 130px;
+      margin: 0 20px 10px 0;
+      border: 1px solid #eee;
+      
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+        color: #444;
+    }
+
+    .input-group input,
+    .input-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 12px;
+        background: #0077cc;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .btn-submit:hover {
+        background: #005fa3;
+    }
+
+</style>
+
+{% include 'adminheader.html' %}
+
+   <!-- Main content -->
+    <div class="container">
+      <!-- Left column -->
+      <section class="content">
+        <h2 class="post-title">Add employee</h2>
+        <div class="post-meta"></div>
+        <div class="post-text">
+            <form method="post" action="/save">
+                <div class="input-group">
+                    Emp Id<input type="text" name="empid" placeholder="" required></div>
+                <div class="input-group">
+                    Full Name<input type="text" name="name" placeholder="Enter full name" required></div>
+                <div class="input-group">
+                    Email<input type="email" name="email" placeholder="Enter email" required></div>
+                <div class="input-group">
+                    Phone Number<input type="text" name="phone" placeholder="Enter phone number" required></div>
+                <div class="input-group">
+                    Department<select name="department" required>
+                        <option value="">Select department</option>
+                        <option>HR</option>
+                        <option>Finance</option>
+                        <option>IT</option>
+                        <option>Sales</option>
+                        <option>Marketing</option>
+                    </select></div>
+                <div class="input-group">
+                    Joining Date<input type="date" name="joining_date" required></div>
+                <div class="input-group">
+                    Salary<input type="number" name="salary" placeholder="Enter salary" required></div>
+                <button class="btn-submit">Add Employee</button>
+            </form>
+        </div>
+        <div class="clear"></div>
+      </section>
+
+      <!-- Right column / sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <p>
+            <div class="post-image1">
+              <img src="static/Admin.jpeg" alt="" > 
+            </div>
+          </p>
+          <br>
+        </div>
+        <br><br>
+        <div class="sidebar-box1"></div>
+        <br><br><br><br>
+        <h4 style="text-align: left;padding-left: 20px;">{{admin_name}}</h4>
+        <h5 style="text-align: left;padding-left: 60px;">Admin</h5>
+          
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      &copy; 2025 HRERP. Design by <a href="#">ABC</a>.
+    </footer>
+  </div>
+
+</body>
+</html>

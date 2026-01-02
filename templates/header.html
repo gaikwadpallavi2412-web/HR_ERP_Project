@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ABC IT Solution Ltd.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------- Global ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Open Sans", Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #1fa2ff 0%, #0b2340 45%, #000 100%);
+      color: #333;
+    }
+
+    a {
+      color: #1b71aa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- Layout wrapper ---------- */
+    .wrapper {
+      width: 960px;
+      margin: 40px auto;
+      background: #ffffff;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    /* ---------- Top header ---------- */
+    .top-header {
+      background: linear-gradient(to bottom, #1fa2ff, #0060a0);
+      text-align: center;
+      padding: 40px 20px 30px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .top-header h1 {
+      font-family: "Oswald", Arial, sans-serif;
+      font-size: 44px;
+      letter-spacing: 4px;
+      margin-bottom: 5px;
+    }
+
+    .top-header span {
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    /* ---------- Navigation ---------- */
+    .nav {
+      background: #033452;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      border-bottom: 1px solid #021d2e;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav li {
+      margin: 0 25px;
+    }
+
+    .nav a {
+      display: block;
+      padding: 12px 0;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #e3f4ff;
+    }
+
+    .nav a:hover,
+    .nav .active a {
+      color: #ffffff;
+      border-bottom: 3px solid #3bb3ff;
+    }
+
+    /* ---------- Main content area ---------- */
+    .container {
+      display: flex;
+      padding: 30px 30px 40px;
+    }
+
+    .content {
+      width: 64%;
+      padding-right: 30px;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar {
+      width: 36%;
+      padding-left: 30px;
+    }
+
+    /* ---------- Post / article ---------- */
+    .post-title {
+      font-family: "Oswald", Arial, sans-serif;
+      font-size: 26px;
+      color: #1b71aa;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .post-meta {
+      font-size: 11px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .post-image {
+      float: left;
+      width: 190px;
+      height: 130px;
+      background: #ccc;
+      margin: 0 20px 10px 0;
+      border: 1px solid #eee;
+    }
+
+    .post-text {
+      font-size: 13px;
+      line-height: 1.7;
+      
+    }
+
+    .post-text p {
+      margin-bottom: 14px;
+      text-align: justify;
+      
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    /* ---------- Sidebar ---------- */
+    .sidebar-box {
+      margin-bottom: 25px;
+    }
+
+    .sidebar-title {
+      font-family: "Oswald", Arial, sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #1b71aa;
+      margin-bottom: 10px;
+    }
+
+    .sidebar p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      margin-top: 5px;
+    }
+
+    .sidebar li {
+      padding: 6px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 13px;
+    }
+
+    .sidebar li:last-child {
+      border-bottom: none;
+    }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      font-size: 11px;
+      text-align: center;
+      padding: 12px;
+      background: #f1f1f1;
+      border-top: 1px solid #ddd;
+      color: #777;
+    }
+
+    .footer a {
+      color: #1b71aa;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <!-- Header -->
+    <header class="top-header">
+      <h1>ABC IT Solution Ltd.</h1>
+      <span>where dream comes true...</span>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <ul>
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Photos</a></li>
+        <li><a href="/admin">Admin</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>

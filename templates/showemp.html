@@ -1,0 +1,148 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .table1 {
+        width: 5%;
+        margin: 10px auto;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-left: 0px; 
+    }
+    .table2 {
+        width: 60%;
+        margin: 10px auto;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-left: 100px; 
+    }
+
+    th, td {
+        padding: 7px 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    th {
+        background: #0077cc;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    tr:nth-child(even) {
+        background: #f2f2f2;
+    }
+    .post-meta {
+      font-size: 11px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+</style>
+
+{% include 'adminheader.html' %}
+
+   <!-- Main content -->
+    <div class="container">
+      <!-- Left column -->
+      <section class="content">
+        
+        <div class="post-meta"></div>
+        <div class="post-text">
+    {% if temp==1 %}
+        <!-- for all employee -->
+         <h2 class="post-title">Employee List</h2>
+        <table class="table2"> 
+            <thead >
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th></th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                {% for emp in employees %}
+                <tr>
+                    <td>{{ emp[0] }}</td>
+                    <td>{{ emp[1] }}</td>
+                    <td>{{ emp[4] }}</td>
+                    <td><a href="/profile?empid={{emp[0]}}">view</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    {% else %} <!-- for single employee -->
+            <h2 class="post-title">Employee Profile</h2>
+            <table class="table1">
+
+            <thead >
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Department</th>
+                    <th>Joining Date</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for emp in employee_1 %}
+                <tr>
+                    <td>{{ emp[0] }}</td>
+                    <td>{{ emp[1] }}</td>
+                    <td>{{ emp[2] }}</td>
+                    <td>{{ emp[3] }}</td>
+                    <td>{{ emp[4] }}</td>
+                    <td>{{ emp[5] }}</td>
+                    <td>{{ emp[6] }}</td>
+                </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+    {% endif %}
+    </section>
+        <!-- Right column / sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <p>
+            <div class="post-image1">
+              <img src="static/Admin.jpeg" alt="" > 
+            </div>
+          </p>
+          
+        </div>
+        
+        <div class="sidebar-box1"></div>
+        
+        <h4 style="text-align: left;padding-left: 20px;">{{admin_name}}</h4>
+        <h5 style="text-align: left;padding-left: 60px;">Admin</h5>
+          
+      </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      &copy; 2025 HRERP. Design by <a href="#">ABC</a>.
+    </footer>
+  </div>
+
+</body>
+</html>

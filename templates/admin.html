@@ -1,0 +1,104 @@
+    {% include 'header.html' %}
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .login-box {
+        width: 350px;
+        padding: 30px;
+        background: #ffffff;
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        border-radius: 8px;
+    }
+    .login-box h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+    }
+    .input-group {
+        margin-bottom: 18px;
+    }
+    .input-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+        color: #555;
+    }
+    .input-group input {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    .login-btn {
+        width: 50%;
+        padding: 12px;
+        background: #0077cc;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 5px;
+    }
+    .login-btn:hover {
+        background: #005fa3;
+    }
+</style>
+</head>
+<!-- Main content -->
+    <div class="container">
+      <!-- Left column -->
+      <section class="content">
+        <h2 class="post-title">Welcome to Admin Department</h2>
+        <div class="post-meta"></div>
+        <div class="post-text">
+          <form action="/adminhome" method="post">
+            <div class="input-group">
+                <input type="text" name="nameadmin" placeholder="Enter Username" required></div>
+            <div class="input-group">
+                <input type="password" name="passadmin" placeholder="Enter Password" required></div>
+            <button class="login-btn">Login</button>
+          </form><br>
+          <font color='red'>{{message}}</font>
+        </div>
+      <div class="clear"></div>
+      </section>
+
+      <!-- Right column / sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Our Vision</h3>
+          <p>
+            To become a leading global technology partner known for delivering high-quality solutions, exceptional service, and meaningful digital transformation.
+          </p>
+        </div>
+
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Courses</h3>
+          <ul>
+            <li><a href="#">Software Development</a></li>
+            <li><a href="#">Automation & AI</a></li>
+            <li><a href="#">IT Infrastructure Services</a></li>
+            <li><a href="#">Cloud Solutions</a></li>
+            <li><a href="#">Support & Maintenance</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      &copy; 2025 HRERP. Design by <a href="#">ABC</a>.
+    </footer>
+  </div>
+
+</body>
+</html>

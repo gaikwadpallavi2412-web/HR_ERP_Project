@@ -1,0 +1,65 @@
+<style>
+   .sidebar-box1 {
+      margin-bottom: 25px;
+      
+      text-align: left;
+    }
+     .post-image1 {
+      float: left;
+      width: 160px;
+      height: 130px;
+      margin: 0 20px 10px 0;
+      border: 1px solid #eee;
+      
+    }
+</style>
+{% include 'adminheader.html' %}
+
+   <!-- Main content -->
+    <div class="container">
+      <!-- Left column -->
+      <section class="content">
+        <h2 class="post-title">Welcome {{admin_name}}</h2>
+        <div class="post-meta"></div>
+        <div class="post-image">
+          <img src="static/homepage.jpeg" alt="" ></div>
+
+        <div class="post-text">
+          <p>
+            Welcome to the centralized control panel where you can monitor system activity, manage user accounts, track performance, and configure system-level settings. Stay updated with real-time notifications, alerts, and analytics to ensure smooth operation of the platform.
+          </p>
+          <p>
+          Manage your system, users, and operations from this central dashboard.
+          Use the navigation menu to access key administrative tools and monitor activity.
+          </p>
+        </div>
+
+        <div class="clear"></div>
+      </section>
+
+      <!-- Right column / sidebar -->
+      <aside class="sidebar">
+      <div class="sidebar-box">
+          <p>
+            <div class="post-image1">
+              <img src="static/Admin.jpeg" alt="" > 
+            </div>
+          </p>
+          <br>
+        </div>
+        <br><br>
+        <div class="sidebar-box1"></div>
+        <br><br><br><br>
+        <h4 style="text-align: left;padding-left: 20px;">{{admin_name}}</h4>
+        <h5 style="text-align: left;padding-left: 60px;">Admin</h5>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      &copy; 2025 HRERP. Design by <a href="#">ABC</a>.
+    </footer>
+  </div>
+
+</body>
+</html>
