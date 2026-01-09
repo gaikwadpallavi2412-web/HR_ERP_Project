@@ -11,6 +11,12 @@ This is a simple Human Resource ERP web application built using Flask and MySQL.
 - Delete employee records
 - Search employee by ID
 
+## Demo Documentation
+
+A detailed demo is available here:
+
+📄 [Download Demo Document](Demo.docx)
+
 ## 🛠️ Tech Stack
 
 - **Backend**: Flask (Python)
